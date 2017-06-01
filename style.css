@@ -23,12 +23,14 @@ header {
 
     width: 600px;
     height: 83px;
+    z-index: 1;
 }
 
 #header-index-box {
     position: absolute;
     top: 60px;
     left: 537px;
+    z-index: 3;
 }
 
 .header-index {
@@ -43,4 +45,35 @@ header {
 #header-others {
     list-style: none;
     font-size: smaller;
+}
+
+#wrap {
+    width: 100%;
+    height: 1098px;
+    display: flex;
+    justify-content: flex-start;
+
+}
+#nav {
+    width: 15%;
+    height: 1098px;
+    border: 1px solid;
+}
+
+#content {
+    width: 85%;
+    height: 1098px;
+    border: 1px solid;
+
+    /*瀑布流的容器*/
+    column-count: 3;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+}
+
+.content-item {
+    break-inside: avoid;
+    box-sizing: border-box;
+    padding: 10px;
 }
